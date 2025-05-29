@@ -1,0 +1,360 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "steel-blue": "#4682B4",
+        "sand-beige": "#E8DCC5",
+        "anthracite": "#2C3539"
+      },
+      "fontFamily": {
+        "inter": [
+          "Inter",
+          "sans-serif"
+        ],
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head><body>
+    <header id="header" class="fixed w-full bg-white/95 backdrop-blur-sm z-50 transition-all duration-300">
+  <div class="container mx-auto px-6 py-4">
+    <nav class="flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-semibold">PROPORTIONS</a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="services.html" class="text-slate-700 hover:text-slate-900">Services</a>
+        <a href="portfolio.html" class="text-slate-700 hover:text-slate-900">Portfolio</a>
+        <a href="immo.html" class="text-slate-700 hover:text-slate-900">Immo</a>
+        <a href="Bureau.html" class="text-slate-700 hover:text-slate-900">Bureau</a>
+        <a href="contact.html" class="px-6 py-2 bg-anthracite text-white rounded hover:bg-steel-blue transition-colors">Contact</a>
+      </div>
+      <button class="md:hidden text-slate-700">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </nav>
+  </div>
+</header>
+
+
+
+    <!-- Projects Page Content -->
+    <section id="projects-list-section" class="w-full px-6 py-16 md:px-12 lg:px-24">
+        <div class="mb-12">
+            <h2 class="text-4xl uppercase font-light tracking-tight mb-8">Projets</h2>
+            <p class="text-lg max-w-2xl">Découvrez notre portfolio d'architecture, reflétant notre vision d'équilibre et de précision à travers différentes échelles et typologies.</p>
+        </div>
+
+        <!-- Filter Section -->
+        <div id="filter-section" class="mb-12">
+            <div class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-16">
+                <!-- Status Filter -->
+                <div>
+                    <h3 class="uppercase text-sm tracking-wider mb-4">Statut</h3>
+                    <div class="flex flex-wrap gap-6">
+                        <button class="text-sm uppercase border-b border-anthracite">Tous</button>
+                        <button class="text-sm uppercase hover:border-b hover:border-anthracite">Réalisé</button>
+                        <button class="text-sm uppercase hover:border-b hover:border-anthracite">En cours</button>
+                        <button class="text-sm uppercase hover:border-b hover:border-anthracite">Concours</button>
+                    </div>
+                </div>
+                
+                <!-- Region Filter -->
+                <div>
+                    <h3 class="uppercase text-sm tracking-wider mb-4">Région</h3>
+                    <div class="flex flex-wrap gap-6">
+                        <button class="text-sm uppercase border-b border-anthracite">Toutes</button>
+                        <button class="text-sm uppercase hover:border-b hover:border-anthracite">Paris</button>
+                        <button class="text-sm uppercase hover:border-b hover:border-anthracite">Île-de-France</button>
+                        <button class="text-sm uppercase hover:border-b hover:border-anthracite">Sud-Est</button>
+                        <button class="text-sm uppercase hover:border-b hover:border-anthracite">International</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Projects Table -->
+        <div id="projects-table" class="w-full">
+            <!-- Table Header -->
+            <div class="grid grid-cols-12 py-4 border-b border-gray-200">
+                <div class="col-span-4 md:col-span-3 text-sm uppercase tracking-wider">Nom du projet</div>
+                <div class="col-span-3 md:col-span-2 text-sm uppercase tracking-wider">Région</div>
+                <div class="col-span-3 md:col-span-2 text-sm uppercase tracking-wider">Statut</div>
+                <div class="hidden md:block md:col-span-3 text-sm uppercase tracking-wider">Surface</div>
+                <div class="col-span-2 md:col-span-2 text-sm uppercase tracking-wider"></div>
+            </div>
+            
+            <!-- Table Rows -->
+            <div id="project-row-1" class="grid grid-cols-12 py-6 border-b border-gray-100 items-center hover:bg-gray-50 transition-colors duration-200 cursor-pointer" onclick="openProjectDrawer('Villa Horizon')">
+                <div class="col-span-4 md:col-span-3 font-medium">Villa Horizon</div>
+                <div class="col-span-3 md:col-span-2 text-sm">Paris</div>
+                <div class="col-span-3 md:col-span-2 text-sm">Réalisé</div>
+                <div class="hidden md:block md:col-span-3 text-sm">450 m²</div>
+                <div class="col-span-2 md:col-span-2 text-right">
+                    <button class="text-sm uppercase hover:text-steel-blue transition-colors duration-200">Voir</button>
+                </div>
+            </div>
+            
+            <div id="project-row-2" class="grid grid-cols-12 py-6 border-b border-gray-100 items-center hover:bg-gray-50 transition-colors duration-200 cursor-pointer" onclick="openProjectDrawer('Nexus Office')">
+                <div class="col-span-4 md:col-span-3 font-medium">Nexus Office</div>
+                <div class="col-span-3 md:col-span-2 text-sm">Île-de-France</div>
+                <div class="col-span-3 md:col-span-2 text-sm">Réalisé</div>
+                <div class="hidden md:block md:col-span-3 text-sm">2 800 m²</div>
+                <div class="col-span-2 md:col-span-2 text-right">
+                    <button class="text-sm uppercase hover:text-steel-blue transition-colors duration-200">Voir</button>
+                </div>
+            </div>
+            
+            <div id="project-row-3" class="grid grid-cols-12 py-6 border-b border-gray-100 items-center hover:bg-gray-50 transition-colors duration-200 cursor-pointer" onclick="openProjectDrawer('Loft Lumière')">
+                <div class="col-span-4 md:col-span-3 font-medium">Loft Lumière</div>
+                <div class="col-span-3 md:col-span-2 text-sm">Paris</div>
+                <div class="col-span-3 md:col-span-2 text-sm">Réalisé</div>
+                <div class="hidden md:block md:col-span-3 text-sm">180 m²</div>
+                <div class="col-span-2 md:col-span-2 text-right">
+                    <button class="text-sm uppercase hover:text-steel-blue transition-colors duration-200">Voir</button>
+                </div>
+            </div>
+            
+            <div id="project-row-4" class="grid grid-cols-12 py-6 border-b border-gray-100 items-center hover:bg-gray-50 transition-colors duration-200 cursor-pointer" onclick="openProjectDrawer('Place Civique')">
+                <div class="col-span-4 md:col-span-3 font-medium">Place Civique</div>
+                <div class="col-span-3 md:col-span-2 text-sm">Île-de-France</div>
+                <div class="col-span-3 md:col-span-2 text-sm">Réalisé</div>
+                <div class="hidden md:block md:col-span-3 text-sm">5 200 m²</div>
+                <div class="col-span-2 md:col-span-2 text-right">
+                    <button class="text-sm uppercase hover:text-steel-blue transition-colors duration-200">Voir</button>
+                </div>
+            </div>
+            
+            <div id="project-row-5" class="grid grid-cols-12 py-6 border-b border-gray-100 items-center hover:bg-gray-50 transition-colors duration-200 cursor-pointer" onclick="openProjectDrawer('Essence Restaurant')">
+                <div class="col-span-4 md:col-span-3 font-medium">Essence Restaurant</div>
+                <div class="col-span-3 md:col-span-2 text-sm">Paris</div>
+                <div class="col-span-3 md:col-span-2 text-sm">Réalisé</div>
+                <div class="hidden md:block md:col-span-3 text-sm">320 m²</div>
+                <div class="col-span-2 md:col-span-2 text-right">
+                    <button class="text-sm uppercase hover:text-steel-blue transition-colors duration-200">Voir</button>
+                </div>
+            </div>
+            
+            <div id="project-row-6" class="grid grid-cols-12 py-6 border-b border-gray-100 items-center hover:bg-gray-50 transition-colors duration-200 cursor-pointer" onclick="openProjectDrawer('Centre Culturel Prisme')">
+                <div class="col-span-4 md:col-span-3 font-medium">Centre Culturel Prisme</div>
+                <div class="col-span-3 md:col-span-2 text-sm">Sud-Est</div>
+                <div class="col-span-3 md:col-span-2 text-sm">Réalisé</div>
+                <div class="hidden md:block md:col-span-3 text-sm">4 500 m²</div>
+                <div class="col-span-2 md:col-span-2 text-right">
+                    <button class="text-sm uppercase hover:text-steel-blue transition-colors duration-200">Voir</button>
+                </div>
+            </div>
+            
+            <div id="project-row-7" class="grid grid-cols-12 py-6 border-b border-gray-100 items-center hover:bg-gray-50 transition-colors duration-200 cursor-pointer" onclick="openProjectDrawer('Résidence Cube')">
+                <div class="col-span-4 md:col-span-3 font-medium">Résidence Cube</div>
+                <div class="col-span-3 md:col-span-2 text-sm">International</div>
+                <div class="col-span-3 md:col-span-2 text-sm">En cours</div>
+                <div class="hidden md:block md:col-span-3 text-sm">1 200 m²</div>
+                <div class="col-span-2 md:col-span-2 text-right">
+                    <button class="text-sm uppercase hover:text-steel-blue transition-colors duration-200">Voir</button>
+                </div>
+            </div>
+            
+            <div id="project-row-8" class="grid grid-cols-12 py-6 border-b border-gray-100 items-center hover:bg-gray-50 transition-colors duration-200 cursor-pointer" onclick="openProjectDrawer('Médiathèque Linéaire')">
+                <div class="col-span-4 md:col-span-3 font-medium">Médiathèque Linéaire</div>
+                <div class="col-span-3 md:col-span-2 text-sm">Île-de-France</div>
+                <div class="col-span-3 md:col-span-2 text-sm">Concours</div>
+                <div class="hidden md:block md:col-span-3 text-sm">3 800 m²</div>
+                <div class="col-span-2 md:col-span-2 text-right">
+                    <button class="text-sm uppercase hover:text-steel-blue transition-colors duration-200">Voir</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Drawer (initially hidden) -->
+    <div id="project-drawer" class="fixed top-0 right-0 h-full w-full md:w-2/5 bg-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50 overflow-y-auto">
+        <div class="p-6 md:p-12 h-full flex flex-col">
+            <!-- Drawer Header -->
+            <div class="flex justify-between items-center mb-8">
+                <h2 id="drawer-project-title" class="text-2xl uppercase font-medium">Villa Horizon</h2>
+                <button id="close-drawer" class="text-anthracite hover:text-steel-blue transition-colors duration-200">
+                    <i class="text-xl" data-fa-i2svg=""><svg class="svg-inline--fa fa-xmark" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="xmark" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" data-fa-i2svg=""><path fill="currentColor" d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"></path></svg></i>
+                </button>
+            </div>
+            
+            <!-- Project Details -->
+            <div class="flex-grow overflow-y-auto">
+                <!-- Project Specs -->
+                <div class="grid grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <h3 class="text-xs uppercase tracking-wider text-gray-500 mb-1">Région</h3>
+                        <p class="text-sm">Paris</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xs uppercase tracking-wider text-gray-500 mb-1">Statut</h3>
+                        <p class="text-sm">Réalisé</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xs uppercase tracking-wider text-gray-500 mb-1">Surface</h3>
+                        <p class="text-sm">450 m²</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xs uppercase tracking-wider text-gray-500 mb-1">Année</h3>
+                        <p class="text-sm">2022</p>
+                    </div>
+                </div>
+                
+                <!-- Project Description -->
+                <div class="mb-10">
+                    <h3 class="text-sm uppercase tracking-wider mb-4">Description</h3>
+                    <p class="text-sm leading-relaxed mb-4">Villa Horizon est une résidence privée située dans le 16ème arrondissement de Paris. Le projet réinterprète l'hôtel particulier parisien à travers une approche contemporaine où géométrie, lumière et matérialité dialoguent pour créer des espaces de vie fluides et lumineux.</p>
+                    <p class="text-sm leading-relaxed">La façade en pierre calcaire s'intègre au contexte urbain tout en affirmant sa modernité par un jeu de volumes épurés. À l'intérieur, une attention particulière a été portée aux transitions entre les espaces et à la relation avec le jardin, créant une expérience spatiale riche et cohérente.</p>
+                </div>
+                
+                <!-- Project Plan -->
+                <div class="mb-10">
+                    <h3 class="text-sm uppercase tracking-wider mb-4">Plan</h3>
+                    <div class="border border-gray-200 p-2">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/default-placeholder.png" alt="Plan architectural de Villa Horizon" class="w-full h-auto">
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div id="contact-form" class="">
+                    <h3 class="text-sm uppercase tracking-wider mb-4">Demande d'information</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-gray-500 mb-1" for="name">Nom</label>
+                            <input type="text" id="name" class="w-full border-b border-gray-200 py-2 focus:outline-none focus:border-anthracite text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-gray-500 mb-1" for="email">Email</label>
+                            <input type="email" id="email" class="w-full border-b border-gray-200 py-2 focus:outline-none focus:border-anthracite text-sm">
+                        </div>
+                        <div>
+                            <label class="block text-xs uppercase tracking-wider text-gray-500 mb-1" for="message">Message</label>
+                            <textarea id="message" rows="4" class="w-full border-b border-gray-200 py-2 focus:outline-none focus:border-anthracite text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="mt-4 uppercase text-sm tracking-wider border-b border-anthracite hover:border-steel-blue hover:text-steel-blue transition-colors duration-200">
+                            Envoyer
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="w-full px-6 py-12 md:px-12 lg:px-24 bg-gray-100">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-3">
+                <h4 class="text-lg uppercase font-medium mb-4">PROPORTIONS</h4>
+                <p class="text-sm mb-6">Bureau d'architecture<br>Fondé en 2015</p>
+            </div>
+            <div class="md:col-span-3">
+                <h5 class="text-sm uppercase font-medium mb-4">Contact</h5>
+                <p class="text-sm mb-2">info@proportions-archi.com</p>
+                <p class="text-sm mb-2">+33 1 42 56 78 90</p>
+                <p class="text-sm">25 rue de l'Architecture<br>75004 Paris, France</p>
+            </div>
+            <div class="md:col-span-3">
+                <h5 class="text-sm uppercase font-medium mb-4">Navigation</h5>
+                <ul class="space-y-2">
+                    <li><span class="text-sm hover:text-steel-blue transition-colors duration-200 cursor-pointer">Projets</span></li>
+                    <li><span class="text-sm hover:text-steel-blue transition-colors duration-200 cursor-pointer">Services</span></li>
+                    <li><span class="text-sm hover:text-steel-blue transition-colors duration-200 cursor-pointer">Bureau</span></li>
+                    <li><span class="text-sm hover:text-steel-blue transition-colors duration-200 cursor-pointer">Contact</span></li>
+                </ul>
+            </div>
+            <div class="md:col-span-3">
+                <h5 class="text-sm uppercase font-medium mb-4">Suivez-nous</h5>
+                <div class="flex space-x-4">
+                    <span class="text-anthracite hover:text-steel-blue transition-colors duration-200 cursor-pointer">
+                        <i class="text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-instagram" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></i>
+                    </span>
+                    <span class="text-anthracite hover:text-steel-blue transition-colors duration-200 cursor-pointer">
+                        <i class="text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-linkedin" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="linkedin" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg></i>
+                    </span>
+                    <span class="text-anthracite hover:text-steel-blue transition-colors duration-200 cursor-pointer">
+                        <i class="text-lg" data-fa-i2svg=""><svg class="svg-inline--fa fa-pinterest" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="pinterest" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M496 256c0 137-111 248-248 248-25.6 0-50.2-3.9-73.4-11.1 10.1-16.5 25.2-43.5 30.8-65 3-11.6 15.4-59 15.4-59 8.1 15.4 31.7 28.5 56.8 28.5 74.8 0 128.7-68.8 128.7-154.3 0-81.9-66.9-143.2-152.9-143.2-107 0-163.9 71.8-163.9 150.1 0 36.4 19.4 81.7 50.3 96.1 4.7 2.2 7.2 1.2 8.3-3.3.8-3.4 5-20.3 6.9-28.1.6-2.5.3-4.7-1.7-7.1-10.1-12.5-18.3-35.3-18.3-56.6 0-54.7 41.4-107.6 112-107.6 60.9 0 103.6 41.5 103.6 100.9 0 67.1-33.9 113.6-78 113.6-24.3 0-42.6-20.1-36.7-44.8 7-29.5 20.5-61.3 20.5-82.6 0-19-10.2-34.9-31.4-34.9-24.9 0-44.9 25.7-44.9 60.2 0 22 7.4 36.8 7.4 36.8s-24.5 103.8-29 123.2c-5 21.4-3 51.6-.9 71.2C65.4 450.9 0 361.1 0 256 0 119 111 8 248 8s248 111 248 248z"></path></svg></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 pt-6 border-t border-gray-200">
+            <p class="text-xs text-gray-500">© 2023 PROPORTIONS. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Function to open project drawer
+        function openProjectDrawer(projectName) {
+            const drawer = document.getElementById('project-drawer');
+            const projectTitle = document.getElementById('drawer-project-title');
+            
+            // Set project title
+            projectTitle.textContent = projectName;
+            
+            // Open drawer
+            drawer.classList.remove('translate-x-full');
+            
+            // Add event listener to close button
+            document.getElementById('close-drawer').addEventListener('click', closeProjectDrawer);
+            
+            // Add event listener to close drawer when clicking outside
+            document.addEventListener('click', closeDrawerOnOutsideClick);
+        }
+        
+        // Function to close project drawer
+        function closeProjectDrawer() {
+            const drawer = document.getElementById('project-drawer');
+            drawer.classList.add('translate-x-full');
+            
+            // Remove event listener for outside click
+            document.removeEventListener('click', closeDrawerOnOutsideClick);
+        }
+        
+        // Function to close drawer when clicking outside
+        function closeDrawerOnOutsideClick(event) {
+            const drawer = document.getElementById('project-drawer');
+            if (!drawer.contains(event.target) && !event.target.closest('[onclick^="openProjectDrawer"]')) {
+                closeProjectDrawer();
+            }
+        }
+    </script>
+
+</body></html>

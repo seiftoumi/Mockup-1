@@ -1,0 +1,239 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "steel-blue": "#4682B4",
+        "sand-beige": "#E8DCC5",
+        "anthracite": "#2C3539"
+      },
+      "fontFamily": {
+        "inter": [
+          "Inter",
+          "sans-serif"
+        ],
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head>
+<body class="font-inter bg-white text-anthracite">
+    <!-- Header -->
+ <header id="header" class="fixed w-full bg-white/95 backdrop-blur-sm z-50 transition-all duration-300">
+  <div class="container mx-auto px-6 py-4">
+    <nav class="flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-semibold">PROPORTIONS</a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="services.html" class="text-slate-700 hover:text-slate-900">Services</a>
+        <a href="portfolio.html" class="text-slate-700 hover:text-slate-900">Portfolio</a>
+        <a href="immo.html" class="text-slate-700 hover:text-slate-900">Immo</a>
+        <a href="Bureau.html" class="text-slate-700 hover:text-slate-900">Bureau</a>
+        <a href="contact.html" class="px-6 py-2 bg-anthracite text-white rounded hover:bg-steel-blue transition-colors">Contact</a>
+      </div>
+      <button class="md:hidden text-slate-700">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </nav>
+  </div>
+</header>
+
+
+    <!-- Hero Section (Bloc 1) -->
+    <section id="hero-section" class="w-full px-6 py-16 md:px-12 lg:px-24">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-8">
+                <h2 class="text-4xl md:text-6xl lg:text-7xl uppercase font-light tracking-tight mb-8">Architecture<br>de précision<br>et d'équilibre</h2>
+                <p class="text-lg md:text-xl mb-12 max-w-2xl">Nous concevons des espaces où la forme suit la fonction, où chaque élément trouve sa juste proportion et où la géométrie dialogue avec la lumière.</p>
+                <span class="inline-flex items-center uppercase text-sm tracking-wider group cursor-pointer">
+                    <span class="border-b border-anthracite group-hover:border-steel-blue transition-colors duration-200">Découvrir nos projets</span>
+                    <i class="fa-solid fa-arrow-right ml-3"></i>
+                </span>
+            </div>
+            <div class="md:col-span-4">
+                <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ff661159a8-41149f5e63912b59f290.png" alt="minimalist architectural building with clean lines and geometric shapes, professional photography, white background">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section (Bloc 2) -->
+    <section id="about-section" class="w-full px-6 py-16 md:px-12 lg:px-24 bg-gray-50">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+            <div class="md:col-span-8">
+                <h3 class="text-2xl uppercase font-medium tracking-wider mb-8">Le Bureau</h3>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                    <p class="text-justify">Fondé en 2015, PROPORTIONS est un bureau d'architecture dédié à la création d'espaces contemporains où la forme et la fonction atteignent un équilibre parfait.</p>
+                    <p class="text-justify">Notre approche repose sur une analyse méticuleuse du contexte, une compréhension profonde des besoins du client et une attention particulière aux détails.</p>
+                    <p class="text-justify">Nous privilégions les matériaux nobles et durables, les lignes épurées et les volumes harmonieux pour créer des espaces qui résistent à l'épreuve du temps.</p>
+                    <p class="text-justify">Notre équipe pluridisciplinaire combine expertise technique et sensibilité esthétique pour transformer chaque projet en une expérience spatiale unique.</p>
+                </div>
+            </div>
+            <div class="md:col-span-4">
+                <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/51df99db45-96693c2cb3718d740815.png" alt="modern minimalist architecture studio office space with designers working, clean white interior with glass partitions">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section (Bloc 3) -->
+    <section id="services-section" class="w-full px-6 py-16 md:px-12 lg:px-24">
+        <h3 class="text-2xl uppercase font-medium tracking-wider mb-12">Nos Services</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div id="service-card-1" class="flex flex-col">
+                <h4 class="text-xl uppercase font-medium mb-4">Architecture</h4>
+                <div class="w-12 h-px bg-steel-blue mb-6"></div>
+                <p class="text-base">De la conception initiale à la réalisation finale, nous développons des projets architecturaux complets qui allient esthétique, fonctionnalité et durabilité.</p>
+            </div>
+            <div id="service-card-2" class="flex flex-col">
+                <h4 class="text-xl uppercase font-medium mb-4">Intérieur</h4>
+                <div class="w-12 h-px bg-steel-blue mb-6"></div>
+                <p class="text-base">Nous créons des espaces intérieurs sur mesure qui reflètent l'identité de leurs occupants tout en optimisant la circulation, la lumière et l'ergonomie.</p>
+            </div>
+            <div id="service-card-3" class="flex flex-col">
+                <h4 class="text-xl uppercase font-medium mb-4">Urbanisme</h4>
+                <div class="w-12 h-px bg-steel-blue mb-6"></div>
+                <p class="text-base">Nous élaborons des stratégies urbaines qui favorisent la cohérence spatiale, la mobilité douce et l'intégration harmonieuse dans le tissu existant.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (Bloc 4) -->
+    <section id="projects-section" class="w-full px-6 py-16 md:px-12 lg:px-24 bg-gray-50">
+        <h3 class="text-2xl uppercase font-medium tracking-wider mb-12">Projets Récents</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div id="project-card-1" class="group relative overflow-hidden">
+                <img class="w-full aspect-square object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1500736f15-9a3d99d563d59b3d832f.png" alt="minimalist residential architecture with clean lines and large windows, concrete and glass">
+                <div class="absolute bottom-0 left-0 w-full p-4 bg-white bg-opacity-80 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h4 class="text-lg uppercase font-medium">Villa Horizon</h4>
+                    <p class="text-sm">Résidence privée | 2022</p>
+                </div>
+            </div>
+            <div id="project-card-2" class="group relative overflow-hidden">
+                <img class="w-full aspect-square object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1204f0e4cb-3840e9d840b85e79277e.png" alt="modern office building with geometric facade, glass and steel, architectural photography">
+                <div class="absolute bottom-0 left-0 w-full p-4 bg-white bg-opacity-80 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h4 class="text-lg uppercase font-medium">Nexus Office</h4>
+                    <p class="text-sm">Espace de travail | 2021</p>
+                </div>
+            </div>
+            <div id="project-card-3" class="group relative overflow-hidden">
+                <img class="w-full aspect-square object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6c4841f784-b4ba03872ad8842bbffd.png" alt="minimalist interior design with open space, natural light, wooden elements and white walls">
+                <div class="absolute bottom-0 left-0 w-full p-4 bg-white bg-opacity-80 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h4 class="text-lg uppercase font-medium">Loft Lumière</h4>
+                    <p class="text-sm">Rénovation | 2022</p>
+                </div>
+            </div>
+            <div id="project-card-4" class="group relative overflow-hidden">
+                <img class="w-full aspect-square object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1f76500f7a-c766a53255684335514d.png" alt="urban public space with geometric patterns, concrete benches and minimalist landscaping">
+                <div class="absolute bottom-0 left-0 w-full p-4 bg-white bg-opacity-80 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h4 class="text-lg uppercase font-medium">Place Civique</h4>
+                    <p class="text-sm">Espace public | 2021</p>
+                </div>
+            </div>
+            <div id="project-card-5" class="group relative overflow-hidden">
+                <img class="w-full aspect-square object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/758ab55ade-6cd8f7817c2215ba73cf.png" alt="minimalist restaurant interior with clean lines, neutral colors and architectural lighting">
+                <div class="absolute bottom-0 left-0 w-full p-4 bg-white bg-opacity-80 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h4 class="text-lg uppercase font-medium">Essence Restaurant</h4>
+                    <p class="text-sm">Commercial | 2023</p>
+                </div>
+            </div>
+            <div id="project-card-6" class="group relative overflow-hidden">
+                <img class="w-full aspect-square object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/8c7a1251b0-3ded249866025449a9e4.png" alt="contemporary cultural center with geometric architecture, glass facade and public space">
+                <div class="absolute bottom-0 left-0 w-full p-4 bg-white bg-opacity-80 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <h4 class="text-lg uppercase font-medium">Centre Culturel Prisme</h4>
+                    <p class="text-sm">Équipement public | 2022</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section (Bloc 5) -->
+    <section id="cta-section" class="w-full px-6 py-24 md:px-12 lg:px-24">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl lg:text-7xl uppercase font-light tracking-tight mb-12">Donnons forme à votre vision</h2>
+            <span class="inline-flex items-center uppercase text-sm tracking-wider border-b border-anthracite hover:border-steel-blue hover:text-steel-blue transition-colors duration-200 cursor-pointer">
+                <span>Discuter de votre projet</span>
+                <i class="fa-solid fa-arrow-right ml-3"></i>
+            </span>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="w-full px-6 py-12 md:px-12 lg:px-24 bg-gray-100">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-3">
+                <h4 class="text-lg uppercase font-medium mb-4">PROPORTIONS</h4>
+                <p class="text-sm mb-6">Bureau d'architecture<br>Fondé en 2015</p>
+            </div>
+            <div class="md:col-span-3">
+                <h5 class="text-sm uppercase font-medium mb-4">Contact</h5>
+                <p class="text-sm mb-2">info@proportions-archi.com</p>
+                <p class="text-sm mb-2">+33 1 42 56 78 90</p>
+                <p class="text-sm">25 rue de l'Architecture<br>75004 Paris, France</p>
+            </div>
+            <div class="md:col-span-3">
+                <h5 class="text-sm uppercase font-medium mb-4">Navigation</h5>
+                <ul class="space-y-2">
+                    <li><span class="text-sm hover:text-steel-blue transition-colors duration-200 cursor-pointer">Projets</span></li>
+                    <li><span class="text-sm hover:text-steel-blue transition-colors duration-200 cursor-pointer">Services</span></li>
+                    <li><span class="text-sm hover:text-steel-blue transition-colors duration-200 cursor-pointer">Bureau</span></li>
+                    <li><span class="text-sm hover:text-steel-blue transition-colors duration-200 cursor-pointer">Contact</span></li>
+                </ul>
+            </div>
+            <div class="md:col-span-3">
+                <h5 class="text-sm uppercase font-medium mb-4">Suivez-nous</h5>
+                <div class="flex space-x-4">
+                    <span class="text-anthracite hover:text-steel-blue transition-colors duration-200 cursor-pointer">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                    </span>
+                    <span class="text-anthracite hover:text-steel-blue transition-colors duration-200 cursor-pointer">
+                        <i class="fa-brands fa-linkedin text-lg"></i>
+                    </span>
+                    <span class="text-anthracite hover:text-steel-blue transition-colors duration-200 cursor-pointer">
+                        <i class="fa-brands fa-pinterest text-lg"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 pt-6 border-t border-gray-200">
+            <p class="text-xs text-gray-500">© 2023 PROPORTIONS. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+</body></html>

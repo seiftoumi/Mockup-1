@@ -1,0 +1,356 @@
+<html><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script> window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <style>::-webkit-scrollbar { display: none;}</style>
+    <script>tailwind.config = {
+  "theme": {
+    "extend": {
+      "colors": {
+        "steel-blue": "#4682B4",
+        "sand-beige": "#E8DCC5",
+        "anthracite": "#2C3539"
+      },
+      "fontFamily": {
+        "inter": [
+          "Inter",
+          "sans-serif"
+        ],
+        "sans": [
+          "Inter",
+          "sans-serif"
+        ]
+      }
+    }
+  }
+};</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&amp;display=swap"><style>
+      body {
+        font-family: 'Inter', sans-serif !important;
+      }
+      
+      /* Preserve Font Awesome icons */
+      .fa, .fas, .far, .fal, .fab {
+        font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+      }
+    </style><style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  </style></head>
+<body class="font-inter bg-white text-anthracite">
+    <!-- Header -->
+<header id="header" class="fixed w-full bg-white/95 backdrop-blur-sm z-50 transition-all duration-300">
+  <div class="container mx-auto px-6 py-4">
+    <nav class="flex items-center justify-between">
+      <a href="index.html" class="text-2xl font-semibold">PROPORTIONS</a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="services.html" class="text-slate-700 hover:text-slate-900">Services</a>
+        <a href="portfolio.html" class="text-slate-700 hover:text-slate-900">Portfolio</a>
+        <a href="immo.html" class="text-slate-700 hover:text-slate-900">Immo</a>
+        <a href="Bureau.html" class="text-slate-700 hover:text-slate-900">Bureau</a>
+        <a href="contact.html" class="px-6 py-2 bg-anthracite text-white rounded hover:bg-steel-blue transition-colors">Contact</a>
+      </div>
+      <button class="md:hidden text-slate-700">
+        <i class="fa-solid fa-bars text-2xl"></i>
+      </button>
+    </nav>
+  </div>
+</header>
+
+
+
+
+    <!-- Portfolio Section -->
+    <section id="portfolio-section" class="w-full px-6 py-12 md:px-12 lg:px-24">
+        <div class="mb-12">
+            <h2 class="text-2xl uppercase font-medium tracking-wider mb-8">Portfolio</h2>
+            
+            <!-- Filters -->
+            <div id="filters" class="flex flex-wrap items-center space-x-8 mb-12 border-b border-gray-200 pb-4">
+                <span class="uppercase text-xs tracking-wider font-medium border-b border-anthracite cursor-pointer">Tous</span>
+                <span class="uppercase text-xs tracking-wider text-gray-500 hover:text-anthracite transition-colors duration-200 cursor-pointer">Résidentiels</span>
+                <span class="uppercase text-xs tracking-wider text-gray-500 hover:text-anthracite transition-colors duration-200 cursor-pointer">Commerciaux</span>
+                <span class="uppercase text-xs tracking-wider text-gray-500 hover:text-anthracite transition-colors duration-200 cursor-pointer">Culturels</span>
+                <span class="uppercase text-xs tracking-wider text-gray-500 hover:text-anthracite transition-colors duration-200 cursor-pointer">Urbains</span>
+                <span class="uppercase text-xs tracking-wider text-gray-500 hover:text-anthracite transition-colors duration-200 cursor-pointer">Intérieurs</span>
+            </div>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Project 1 -->
+            <div id="project-item-1" class="group cursor-pointer">
+                <div class="aspect-square overflow-hidden">
+                    <img class="w-full h-full object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1500736f15-9a3d99d563d59b3d832f.png" alt="Villa Horizon">
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-sm uppercase font-normal">Villa Horizon</h3>
+                    <p class="text-xs text-gray-500">2022</p>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div id="project-item-2" class="group cursor-pointer">
+                <div class="aspect-square overflow-hidden">
+                    <img class="w-full h-full object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1204f0e4cb-3840e9d840b85e79277e.png" alt="Nexus Office">
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-sm uppercase font-normal">Nexus Office</h3>
+                    <p class="text-xs text-gray-500">2021</p>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div id="project-item-3" class="group cursor-pointer">
+                <div class="aspect-square overflow-hidden">
+                    <img class="w-full h-full object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6c4841f784-b4ba03872ad8842bbffd.png" alt="Loft Lumière">
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-sm uppercase font-normal">Loft Lumière</h3>
+                    <p class="text-xs text-gray-500">2022</p>
+                </div>
+            </div>
+            
+            <!-- Project 4 -->
+            <div id="project-item-4" class="group cursor-pointer">
+                <div class="aspect-square overflow-hidden">
+                    <img class="w-full h-full object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1f76500f7a-c766a53255684335514d.png" alt="Place Civique">
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-sm uppercase font-normal">Place Civique</h3>
+                    <p class="text-xs text-gray-500">2021</p>
+                </div>
+            </div>
+            
+            <!-- Project 5 -->
+            <div id="project-item-5" class="group cursor-pointer">
+                <div class="aspect-square overflow-hidden">
+                    <img class="w-full h-full object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/758ab55ade-6cd8f7817c2215ba73cf.png" alt="Essence Restaurant">
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-sm uppercase font-normal">Essence Restaurant</h3>
+                    <p class="text-xs text-gray-500">2023</p>
+                </div>
+            </div>
+            
+            <!-- Project 6 -->
+            <div id="project-item-6" class="group cursor-pointer">
+                <div class="aspect-square overflow-hidden">
+                    <img class="w-full h-full object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/8c7a1251b0-3ded249866025449a9e4.png" alt="Centre Culturel Prisme">
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-sm uppercase font-normal">Centre Culturel Prisme</h3>
+                    <p class="text-xs text-gray-500">2022</p>
+                </div>
+            </div>
+            
+            <!-- Project 7 -->
+            <div id="project-item-7" class="group cursor-pointer">
+                <div class="aspect-square overflow-hidden">
+                    <img class="w-full h-full object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/ff661159a8-41149f5e63912b59f290.png" alt="Maison Carrée">
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-sm uppercase font-normal">Maison Carrée</h3>
+                    <p class="text-xs text-gray-500">2020</p>
+                </div>
+            </div>
+            
+            <!-- Project 8 -->
+            <div id="project-item-8" class="group cursor-pointer">
+                <div class="aspect-square overflow-hidden">
+                    <img class="w-full h-full object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/51df99db45-96693c2cb3718d740815.png" alt="Studio Equerre">
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-sm uppercase font-normal">Studio Equerre</h3>
+                    <p class="text-xs text-gray-500">2021</p>
+                </div>
+            </div>
+            
+            <!-- Project 9 -->
+            <div id="project-item-9" class="group cursor-pointer">
+                <div class="aspect-square overflow-hidden">
+                    <img class="w-full h-full object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1500736f15-9a3d99d563d59b3d832f.png" alt="Pavillon de Verre">
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-sm uppercase font-normal">Pavillon de Verre</h3>
+                    <p class="text-xs text-gray-500">2022</p>
+                </div>
+            </div>
+            
+            <!-- Project 10 -->
+            <div id="project-item-10" class="group cursor-pointer">
+                <div class="aspect-square overflow-hidden">
+                    <img class="w-full h-full object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1204f0e4cb-3840e9d840b85e79277e.png" alt="Tour Modulaire">
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-sm uppercase font-normal">Tour Modulaire</h3>
+                    <p class="text-xs text-gray-500">2023</p>
+                </div>
+            </div>
+            
+            <!-- Project 11 -->
+            <div id="project-item-11" class="group cursor-pointer">
+                <div class="aspect-square overflow-hidden">
+                    <img class="w-full h-full object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/6c4841f784-b4ba03872ad8842bbffd.png" alt="Appartement Haussmann">
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-sm uppercase font-normal">Appartement Haussmann</h3>
+                    <p class="text-xs text-gray-500">2021</p>
+                </div>
+            </div>
+            
+            <!-- Project 12 -->
+            <div id="project-item-12" class="group cursor-pointer">
+                <div class="aspect-square overflow-hidden">
+                    <img class="w-full h-full object-cover transition-all duration-300 group-hover:opacity-90" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1f76500f7a-c766a53255684335514d.png" alt="Parc Linéaire">
+                </div>
+                <div class="mt-2">
+                    <h3 class="text-sm uppercase font-normal">Parc Linéaire</h3>
+                    <p class="text-xs text-gray-500">2022</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="fixed inset-0 bg-white z-50 hidden">
+        <div class="w-full h-full overflow-y-auto">
+            <!-- Modal Header -->
+            <div class="w-full px-6 py-8 md:px-12 lg:px-24 flex justify-between items-center border-b border-gray-200">
+                <h2 class="text-xl uppercase tracking-wider font-medium">Villa Horizon</h2>
+                <button id="close-modal" class="text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            
+            <!-- Modal Content -->
+            <div class="w-full px-6 py-8 md:px-12 lg:px-24">
+                <!-- Project Gallery -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+                    <div class="aspect-[4/3] overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1500736f15-9a3d99d563d59b3d832f.png" alt="Villa Horizon - Vue extérieure">
+                    </div>
+                    <div class="aspect-[4/3] overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1500736f15-9a3d99d563d59b3d832f.png" alt="Villa Horizon - Salon">
+                    </div>
+                    <div class="aspect-[4/3] overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1500736f15-9a3d99d563d59b3d832f.png" alt="Villa Horizon - Terrasse">
+                    </div>
+                    <div class="aspect-[4/3] overflow-hidden">
+                        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/1500736f15-9a3d99d563d59b3d832f.png" alt="Villa Horizon - Chambre principale">
+                    </div>
+                </div>
+                
+                <!-- Project Info -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                    <div class="md:col-span-4">
+                        <h3 class="text-sm uppercase font-medium mb-4">Informations</h3>
+                        <ul class="space-y-2 text-sm">
+                            <li><span class="text-gray-500">Client:</span> Privé</li>
+                            <li><span class="text-gray-500">Année:</span> 2022</li>
+                            <li><span class="text-gray-500">Surface:</span> 320 m²</li>
+                            <li><span class="text-gray-500">Localisation:</span> Côte d'Azur, France</li>
+                            <li><span class="text-gray-500">Statut:</span> Réalisé</li>
+                        </ul>
+                    </div>
+                    <div class="md:col-span-8">
+                        <h3 class="text-sm uppercase font-medium mb-4">Projet</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <p class="text-sm">Villa Horizon est une résidence privée située sur les hauteurs de la Côte d'Azur. Le projet s'articule autour d'un jeu de volumes simples et épurés qui s'adaptent à la topographie du terrain en pente. La maison se développe sur deux niveaux qui suivent le dénivelé naturel, créant ainsi une série de terrasses offrant des vues panoramiques sur la mer Méditerranée.</p>
+                            <p class="text-sm">L'architecture de la villa privilégie la transparence et la fluidité entre les espaces intérieurs et extérieurs. De grandes baies vitrées coulissantes permettent d'effacer la limite entre le dedans et le dehors, tandis que les matériaux bruts comme le béton, le verre et le bois créent une palette neutre et intemporelle qui met en valeur le paysage environnant.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Next/Prev Project -->
+                <div class="mt-16 pt-8 border-t border-gray-200 flex justify-between">
+                    <span class="inline-flex items-center uppercase text-xs tracking-wider hover:text-steel-blue transition-colors duration-200 cursor-pointer">
+                        <i class="fa-solid fa-arrow-left mr-3"></i>
+                        <span>Projet précédent</span>
+                    </span>
+                    <span class="inline-flex items-center uppercase text-xs tracking-wider hover:text-steel-blue transition-colors duration-200 cursor-pointer">
+                        <span>Projet suivant</span>
+                        <i class="fa-solid fa-arrow-right ml-3"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="w-full px-6 py-12 md:px-12 lg:px-24 bg-gray-100 mt-12">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+            <div class="md:col-span-3">
+                <h4 class="text-lg uppercase font-medium mb-4">PROPORTIONS</h4>
+                <p class="text-sm mb-6">Bureau d'architecture<br>Fondé en 2015</p>
+            </div>
+            <div class="md:col-span-3">
+                <h5 class="text-sm uppercase font-medium mb-4">Contact</h5>
+                <p class="text-sm mb-2">info@proportions-archi.com</p>
+                <p class="text-sm mb-2">+33 1 42 56 78 90</p>
+                <p class="text-sm">25 rue de l'Architecture<br>75004 Paris, France</p>
+            </div>
+            <div class="md:col-span-3">
+                <h5 class="text-sm uppercase font-medium mb-4">Navigation</h5>
+                <ul class="space-y-2">
+                    <li><span class="text-sm hover:text-steel-blue transition-colors duration-200 cursor-pointer">Projets</span></li>
+                    <li><span class="text-sm hover:text-steel-blue transition-colors duration-200 cursor-pointer">Services</span></li>
+                    <li><span class="text-sm hover:text-steel-blue transition-colors duration-200 cursor-pointer">Bureau</span></li>
+                    <li><span class="text-sm hover:text-steel-blue transition-colors duration-200 cursor-pointer">Contact</span></li>
+                </ul>
+            </div>
+            <div class="md:col-span-3">
+                <h5 class="text-sm uppercase font-medium mb-4">Suivez-nous</h5>
+                <div class="flex space-x-4">
+                    <span class="text-anthracite hover:text-steel-blue transition-colors duration-200 cursor-pointer">
+                        <i class="fa-brands fa-instagram text-lg"></i>
+                    </span>
+                    <span class="text-anthracite hover:text-steel-blue transition-colors duration-200 cursor-pointer">
+                        <i class="fa-brands fa-linkedin text-lg"></i>
+                    </span>
+                    <span class="text-anthracite hover:text-steel-blue transition-colors duration-200 cursor-pointer">
+                        <i class="fa-brands fa-pinterest text-lg"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="mt-12 pt-6 border-t border-gray-200">
+            <p class="text-xs text-gray-500">© 2023 PROPORTIONS. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Modal functionality
+        document.querySelectorAll('#portfolio-grid > div').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('project-modal').classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        document.getElementById('close-modal').addEventListener('click', () => {
+            document.getElementById('project-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        });
+    </script>
+
+</body></html>
